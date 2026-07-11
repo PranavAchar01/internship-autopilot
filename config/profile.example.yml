@@ -1,0 +1,99 @@
+# ══════════════════════════════════════════════════════════════════════════
+# internship-autopilot — candidate profile & application answers
+#
+# Copy this to config/profile.yml and fill in YOUR details.
+# The system only ever submits answers that come from this file. Any required
+# form question it can't map to a value here routes that application to the
+# review queue instead — it never invents an answer.
+#
+# Live submission stays OFF until:
+#   1. every REQUIRED_TODO below is a real value, AND
+#   2. apply.live: true
+# ══════════════════════════════════════════════════════════════════════════
+
+candidate:
+  first_name: "REQUIRED_TODO"
+  last_name: "REQUIRED_TODO"
+  full_name: "REQUIRED_TODO"
+  email: "REQUIRED_TODO"
+  phone: "REQUIRED_TODO"
+  city: "REQUIRED_TODO"
+  state: "REQUIRED_TODO"
+  zip: "REQUIRED_TODO"
+  street_address: ""          # only used if a form demands it; else queued
+  linkedin: ""
+  github: ""
+  website: ""
+  current_company: ""         # leave blank for students; used on "current employer" fields
+  resume_pdf: "/absolute/path/to/your_resume.pdf"
+  transcript_pdf: ""          # optional; forms requiring a transcript queue if empty
+
+education:
+  school: "REQUIRED_TODO"
+  program: ""
+  degree_level: "Bachelor's (in progress)"
+  major: "REQUIRED_TODO"
+  gpa: ""
+  expected_grad_month: "REQUIRED_TODO"   # e.g. "May"
+  expected_grad_year: "REQUIRED_TODO"    # e.g. 2027
+  currently_enrolled: true
+
+eligibility:
+  # Legal attestations. The system will NOT answer these until you set them.
+  authorized_to_work_us: "REQUIRED_TODO"   # true / false
+  require_sponsorship: "REQUIRED_TODO"     # true / false (now OR in the future)
+  us_citizen: "REQUIRED_TODO"              # true / false
+  date_of_birth: "REQUIRED_TODO"           # YYYY-MM-DD — 18+ questions computed from this
+  felony_disclosure: false
+  security_clearance: "None"
+
+preferences:
+  terms: ["Summer 2027", "Fall 2026", "Spring 2027"]
+  categories: ["Software", "AI/ML/Data", "Software Engineering", "Data Science, AI & Machine Learning"]
+  locations_ok: ["CA", "Remote", "United States"]   # substring match, or remote
+  remote_ok: true
+  relocation_ok: true
+  earliest_start: "2027-06-01"
+  min_keyword_score: 2
+  target_titles_must_match: ["intern", "co-op", "coop"]
+  exclude_title_keywords: ["senior", "staff", "principal", "manager", "phd", "masters", "mba"]
+
+skills:   # used for JD keyword-overlap scoring
+  - python
+  - java
+  - sql
+  # ... your skills
+
+# One-line-ish bio the LLM screener + answer sheet use for tailoring free text.
+candidate_summary: >-
+  A CS student with internship/project experience in X and Y. Skills: Python, ...
+
+# Cover-letter paragraphs (config/cover generation). Write these in your voice.
+cover:
+  opening: "I'm a CS student who builds and ships software end to end."
+  ai_paragraph: "For AI/ML/data roles: 2-4 sentences on your most relevant AI/ML work."
+  swe_paragraph: "For software roles: 2-4 sentences on your most relevant engineering work."
+
+answers:
+  how_did_you_hear: "Company careers page"
+  salary_expectation: "Open / per company internship pay scale"
+  willing_to_relocate: "Yes"
+  available_full_time_internship: ""   # "Yes"/"No" for term-time full-time questions
+  prior_government_employment: "No"
+  swe_interest_area: "Full-stack Development"
+  why_company_fallback: >-
+    A 2-3 sentence generic "why I'm a fit" answer used only when a required
+    free-text field has no better match.
+
+llm:
+  # Optional headless Claude CLI for nuanced qualification + tailored answers.
+  enabled: false
+  binary: "/opt/homebrew/bin/claude"
+  max_jd_per_run: 60
+
+apply:
+  live: false                 # ← flip to true ONLY after all REQUIRED_TODOs are filled
+  headful: true               # visible browser window (recommended — beats bot heuristics)
+  daily_cap: 25
+  min_seconds_between: 90
+  screenshot_every_app: true

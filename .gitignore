@@ -1,0 +1,11 @@
+node_modules/
+config/profile.yml
+.env
+.mcp.json
+state/
+data/
+logs/
+reports/
+*.log
+*.pdf
+.DS_Store

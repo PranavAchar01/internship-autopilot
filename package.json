@@ -1,0 +1,16 @@
+{
+  "name": "internship-autopilot",
+  "version": "0.1.0",
+  "description": "Scout, qualify, and prepare internship applications from public ATS feeds. Zero-token discovery + LLM screening + form-fill engine + cover letters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "playwright-core": "^1.61.1",
+    "yaml": "^2.9.0"
+  }
+}
